@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Srijit&Sai</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Section 1 with Countdown Timer -->
+  <div class="section">
+    <div>
+      <span>Its Our Wedding!!!</span><br>
+      <Span>Save the Date</Span>
+      <div>December 28th 2025</div>
+
+      <div id="countdown" class="countdown">Loading...</div>
+
+      <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+    </div>
+    <button class="scroll-btn" onclick="scrollToSection(1)"><i class="arrow down"></i></button>
+  </div>
+
+  <!-- Other Sections -->
+  <div class="section">
+    Sangeet Ceremony
+    <!-- Buttons to Open Maps -->
+    <div class="map-buttons">
+      <!-- Google Maps Button -->
+      <a href="https://www.google.com/maps?q=9.571928938821888,76.5194355540569" target="_blank">Open in Google Maps</a>
+
+      <!-- Apple Maps Button -->
+      <!-- <a href="https://maps.apple.com/?q=9.571928938821888.5194355540569" target="_blank">Open in Apple Maps</a> -->
+    </div>
+    <button class="scroll-btn" onclick="scrollToSection(2)"><i class="arrow down"></i></button>
+  </div>
+
+  <div class="section">
+    Wedding Ceremony
+      <div class="map-buttons">
+          <!-- Google Maps Button -->
+        <a href="https://www.google.com/maps?q=9.21063421049921, 76.52811166754509" target="_blank">Open in Google Maps</a>
+    
+          <!-- Apple Maps Button -->
+          <!-- <a href="https://maps.apple.com/?q=9.571928938821888.5194355540569" target="_blank">Open in Apple Maps</a> -->
+      </div>
+    <button class="scroll-btn" onclick="scrollToSection(3)"><i class="arrow down"></i></button>
+  </div>
+
+  <div class="section">
+    Looking Forward to meeting you all!!
+    <img src="us.jpeg" alt="Srijit & Sai" class="centered-image">
+    <button class="scroll-btn" onclick="scrollToSection(0)"><i class="arrow up"></i></button>
+  </div>
+<script src="scipts.js"></script>
+</body>
+</html>

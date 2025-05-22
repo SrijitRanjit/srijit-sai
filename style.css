@@ -1,0 +1,204 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+    font-family: sans-serif ;
+  }
+
+  body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+
+  .section {
+    scroll-snap-align: start;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    background: #f0f0f0;
+    border-bottom: 2px solid #ccc;
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+    background: url('bg1.jpg') no-repeat center center; /* Set your background image */
+    background-size: cover;
+  }
+
+  .section:nth-child(even) {
+    background: url('bg2.jpg') no-repeat center center; /* Optional: Change image for alternate sections */
+    background-size: cover;
+  }
+
+  .scroll-btn {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color:transparent;
+    color: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: smooth-bob 1.2s ease-in-out infinite;
+  }
+
+  
+.scroll-btn i.arrow {
+    color: white; /* Make the arrow color visible */
+    font-size: 1.5rem; /* Adjust the arrow size */
+  }
+
+  /* .scroll-btn:hover {
+    animation: smooth-bob 1.2s ease-in-out infinite;
+  } */
+
+  @keyframes smooth-bob {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0); /* Maintain horizontal centering */
+      }
+      50% {
+        transform: translateX(-50%) translateY(-8px); /* Only affect vertical position */
+      }
+  }
+
+  .arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  /* Countdown Section Styling */
+#countdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.countdown {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+    border: 3px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.progress-bar-container {
+    width: 80%;
+    max-width: 400px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0%; /* Starts at 0% width, will be updated dynamically */
+    background-color: #4caf50;
+    transition: width 1s ease-in-out;
+}
+
+/* Map container for responsive design */
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Styling for the buttons */
+  .map-buttons {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .map-buttons a {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .map-buttons a:hover {
+    background-color: #45a049;
+  }
+
+  .centered-image {
+    max-width: 80%;   /* Limit the width to 80% of the parent container */
+    max-height: 80%;  /* Limit the height to 80% of the parent container */
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+    display: block;    /* Remove any inline-block spacing issues */
+  }
+
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    .section {
+        font-size: 4vw;
+    }
+
+    .scroll-btn {
+        font-size: 0.9rem;
+    }
+
+    .countdown {
+        font-size: 2rem;
+    }
+
+    .progress-bar-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-btn {
+        bottom: 3%;
+        font-size: 0.85rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .countdown {
+        font-size: 1.5rem;
+    }
+
+    .progress-bar-container {
+        width: 100%;
+    }
+}
